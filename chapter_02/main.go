@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"strconv"
 	"time"
 )
 
@@ -55,7 +56,16 @@ func main() {
 	fmt.Printf("%s\n", reflect.ValueOf(current_time).Kind())
 
 	// Type convertion
-	var user_age int
-	fmt.Scanf("Enter your age: %d", &user_age)
-	fmt.Println("> Your age is : ", user_age)
+	// var user_age int
+	// fmt.Scanf("Enter your age: %d", &user_age)
+	// fmt.Println("> Your age is : ", user_age)}
+	var input string
+	fmt.Scanf("Enter your age: %s", &input)
+	user_age, err := strconv.Atoi(input)
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println("Your age is:", user_age)
+	}
 }
