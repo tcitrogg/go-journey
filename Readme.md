@@ -55,3 +55,20 @@ var (
     streaks int = 20
 )
 ```
+
+```go
+// Type convertion
+// - Bool
+b, err := strconv.ParseBool("t")
+
+// - Float                   value,   bit
+f, err := strconv.ParseFloat("3.1415", 64)
+
+// - Integer               value, base, bit
+i, err := strconv.ParseInt("-18", 10, 64)
+
+// - Unsigned Integer
+f, err := strconv.ParseUint("20", 10, 64)
+
+f, err := strconv.ParseUint("-53", 10, 64)   //  Will error, cause it cannot parse a signed int as an unsigned int
+```

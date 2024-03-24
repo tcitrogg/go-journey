@@ -33,6 +33,7 @@ func main() {
 	username, age := "@tcitrogg", 20
 	fmt.Printf("Username: %s\nAge: %d\n", username, age)
 
+	// Interpolsting strings
 	fmt.Printf("Publisher: %s\n", PUBLISHER)
 
 	// Raw string
@@ -68,4 +69,10 @@ func main() {
 	} else {
 		fmt.Println("Your age is:", user_age)
 	}
+
+	u2, err := strconv.ParseUint("-18", 10, 64)
+	fmt.Println(u2) // 0
+	fmt.Println(err)
+
+	// fmt.Println(int("10"))
 }
