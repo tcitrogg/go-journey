@@ -61,7 +61,8 @@ func main() {
 	// fmt.Scanf("Enter your age: %d", &user_age)
 	// fmt.Println("> Your age is : ", user_age)}
 	var input string
-	fmt.Scanf("Enter your age: %s", &input)
+	fmt.Print("Enter your age: ")
+	fmt.Scanf("%s", &input)
 	user_age, err := strconv.Atoi(input)
 
 	if err != nil {
@@ -69,10 +70,6 @@ func main() {
 	} else {
 		fmt.Println("Your age is:", user_age)
 	}
-
-	u2, err := strconv.ParseUint("-18", 10, 64)
-	fmt.Println(u2) // 0
-	fmt.Println(err)
 
 	// fmt.Println(int("10"))
 }

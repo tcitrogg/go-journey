@@ -1,5 +1,5 @@
-# Go programming for dummies
-Made this repo while reading through the Book along with things i learnt from other places like video tutorials etc
+# Go journey
+Made this repo while reading through the Book **Go programming for dummies** along with things i learnt from other places like video tutorials etc
 
 
 ## Chapter 1
@@ -40,6 +40,7 @@ for Raspberry Pi `GOARCH` will be `arm64`
 ```sh
 go run main.go
 ```
+or run like we did in ## Chapter 1
 
 ```go
 // Short variable declaration
@@ -72,3 +73,7 @@ f, err := strconv.ParseUint("20", 10, 64)
 
 f, err := strconv.ParseUint("-53", 10, 64)   //  Will error, cause it cannot parse a signed int as an unsigned int
 ```
+
+
+## Chapter 3
+Comparison has to be between between same types
