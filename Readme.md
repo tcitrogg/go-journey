@@ -77,3 +77,27 @@ f, err := strconv.ParseUint("-53", 10, 64)   //  Will error, cause it cannot par
 
 ## Chapter 3
 Comparison has to be between between same types
+```go
+// For Passing or failing
+grade := "C"
+switch grade {
+// case "A":
+// 	fallthrough
+// case "B":
+// 	fallthrough
+// case "C":
+// 	fallthrough
+// case "D":
+// 	fmt.Println("Passed")
+// Or we can just do
+case "A", "B", "C", "D":
+    fmt.Println("Passed")
+case "F":
+    fmt.Println("Failed")
+default:
+    fmt.Println("Absent")
+}
+```
+
+
+## Chapter 4

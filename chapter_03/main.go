@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+func bridgeEthAndXrp() (int, bool) {
+	// Eth no Xrp desu
+	return 8, false
+}
+
 func main() {
 	num := 8
 
@@ -50,4 +55,56 @@ func main() {
 		fmt.Println("(+) Odd Number")
 	}
 
+	// bridgeValue, bridgeError := bridgeEthAndXrp()
+
+	if bridgeValue, bridgeError := bridgeEthAndXrp(); bridgeError {
+		fmt.Printf("(x) Error: %skyddcv	\n", bridgeError)
+	} else {
+		fmt.Println(bridgeValue)
+	}
+
+	// For weekdays
+	day := 5
+	dayInWeek := ""
+
+	switch day {
+	case 1:
+		dayInWeek = "Sunday"
+	case 2:
+		dayInWeek = "Monday"
+	case 3:
+		dayInWeek = "Tuesday"
+	case 4:
+		dayInWeek = "Wednesday"
+	case 5:
+		dayInWeek = "Thursday"
+	case 6:
+		dayInWeek = "Friday"
+	case 7:
+		dayInWeek = "Saturday"
+	default:
+		dayInWeek = "--error--"
+	}
+	fmt.Println(dayInWeek)
+
+	// For grading
+	score := 65
+	grade := ""
+
+	switch {
+	case score < 40:
+		grade = "F"
+	case score < 45:
+		grade = "E"
+	case score < 50:
+		grade = "D"
+	case score < 60:
+		grade = "C"
+	case score < 70:
+		grade = "B"
+	default:
+		grade = "A"
+	}
+
+	fmt.Println(grade)
 }
