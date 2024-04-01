@@ -101,3 +101,7 @@ default:
 
 
 ## Chapter 4
+```go
+count++ // count + 1
+count-- // count - 1
+```
