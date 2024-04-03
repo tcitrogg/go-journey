@@ -35,9 +35,10 @@ for Raspberry Pi `GOARCH` will be `arm64`
 
 
 ## Chapter 2
-#### - Datatypes
-- To run
+- Datatypes
+
 ```sh
+# To run
 go run main.go
 ```
 or run like we did in ## Chapter 1
@@ -76,6 +77,9 @@ f, err := strconv.ParseUint("-53", 10, 64)   //  Will error, cause it cannot par
 
 
 ## Chapter 3
+- If statement
+- Switch-case statement
+
 Comparison has to be between between same types
 ```go
 // For Passing or failing
@@ -101,7 +105,70 @@ default:
 
 
 ## Chapter 4
+- For loop
+- Infinite loop
+
 ```go
 count++ // count + 1
 count-- // count - 1
 ```
+
+Fibonacci in short lines
+```go
+fmt.Println("Fibonacci")
+max := 100
+//    init;     condition;     post
+for a, b := 0, 1; b <= max; a, b = b, a+b {
+    println(b)
+}
+```
+
+Iterating over an array with index
+```go
+var OS [3]string
+OS[0] = "iOS"
+OS[1] = "Android"
+OS[2] = "SailOS"
+
+for index, value := range OS {
+    println(index, value)
+}
+```
+
+
+## Chapter 5
+- Functions
+- Anonymous Functions
+- Closure
+
+```go
+func add_num(num1, num2 int) (sum int) {
+    result = num1 + num2
+    return
+    // We can still use `return result`
+}
+```
+
+Closure
+```go
+func fib() func() int {
+	f1 := 0
+	f2 := 1
+	// this closure
+	return func() int {
+		f1, f2 = f2, f1+f2
+		return f2
+	}
+}
+
+// to run
+get := fib()
+fmt.Println(get())
+```
+
+
+## Chapter 6
+- Array
+- Slice
+
+Array is like tuple in Python, Slice is like list
